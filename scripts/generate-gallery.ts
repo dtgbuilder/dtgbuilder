@@ -9,9 +9,6 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-function toTitleCase(value: string) {
-    return value.replace(/\b\w/g, (char) => char.toUpperCase());
-}
 
 async function run() {
     const result = await cloudinary.search
@@ -28,13 +25,11 @@ async function run() {
         .map((r: any) => {
             const filename = r.public_id.split("/").pop() ?? "";
 
-            const alt = toTitleCase(
-                filename
+            const alt = filename
                     .replace(/_[a-z0-9]+$/i, "")
                     .replace(/\.[^.]+$/, "")
                     .replace(/[-_]/g, " ")
                     .trim()
-            );
 
             return {
                 src: r.public_id,

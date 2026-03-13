@@ -2,10 +2,11 @@
 import { Stack, Typography } from "@mui/material";
 import { CldImage } from "next-cloudinary";
 import { galleryImages as images } from "@/data/galleryImages";
+import { brandColors } from "@/component/color/brandColors";
 
-const COLUMN_MAX_WIDTH = 700;
-const LANDSCAPE_MAX_WIDTH = 640;
-const PORTRAIT_MAX_WIDTH = 480;
+const COLUMN_MAX_WIDTH = 720;
+const LANDSCAPE_MAX_WIDTH = 720;
+const PORTRAIT_MAX_WIDTH = 560;
 
 export default function Page() {
     return (
@@ -25,7 +26,7 @@ export default function Page() {
                 Gallery
             </Typography>
 
-            <Stack sx={ { width: "100%", gap: 2 } }>
+            <Stack sx={ { width: "100%", gap: 3 } }>
                 {images.map((image, index) => {
                     const isPortrait = image.height > image.width;
 
@@ -37,7 +38,8 @@ export default function Page() {
                                 maxWidth: isPortrait
                                     ? PORTRAIT_MAX_WIDTH
                                     : LANDSCAPE_MAX_WIDTH,
-                                margin: "0 auto"
+                                margin: "0 auto",
+                                gap: 1
                             } }
                         >
                             <CldImage
@@ -56,6 +58,18 @@ export default function Page() {
                                     display: "block"
                                 } }
                             />
+
+                            <Typography
+                                sx={ {
+                                    textTransform: "uppercase",
+                                    textAlign: "left",
+                                    lineHeight: "100%",
+                                    fontSize: 14,
+                                    color: brandColors.offBlack
+                                } }
+                            >
+                                {image.alt}
+                            </Typography>
                         </Stack>
                     );
                 })}
