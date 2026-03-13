@@ -55,7 +55,8 @@ export default function Page() {
                                 style={ {
                                     width: "100%",
                                     height: "auto",
-                                    display: "block"
+                                    display: "block",
+                                    borderRadius: 2
                                 } }
                             />
 
