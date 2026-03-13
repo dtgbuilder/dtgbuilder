@@ -1,20 +1,13 @@
 "use client";
 import { Stack, Typography } from "@mui/material";
 import { CldImage } from "next-cloudinary";
-
-const images = [
-    {
-        src: "dtgbuilder/sample-circle_b44e39",
-        alt: "Sample Image",
-        width: 600,
-        height: 600
-    }
-];
+import { galleryImages as images } from "@/data/galleryImages";
 
 export default function Page() {
     return (
         <Stack
             sx={ {
+                width: "100%",
                 maxWidth: "700px",
                 margin: "0 auto"
             } }
@@ -27,7 +20,7 @@ export default function Page() {
                 Images
             </Typography>
 
-            <Stack sx={ { width: "100%", maxWidth: 600 } }>
+            <Stack sx={ { width: "100%", maxWidth: 600, gap: 2 } }>
                 {images.map((image, index) => (
                     <CldImage
                         key={ index }

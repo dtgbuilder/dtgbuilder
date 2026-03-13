@@ -9,6 +9,7 @@ export default function About() {
     return (
         <Stack
             sx={ {
+                width: "100%",
                 maxWidth: "700px",
                 margin: "0 auto"
             } }
@@ -73,7 +74,7 @@ export default function About() {
                         Hey there!
                     </Typography>
                     <Typography>
-                        Checkout out the <InlineLink href="/gallery" text="gallery" /> for some cool stuff.
+                        Check out out the <InlineLink href="/gallery" text="gallery" /> for some cool stuff.
                     </Typography>
                     <Typography>
                         Dylan Green

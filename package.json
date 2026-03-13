@@ -5,6 +5,7 @@
   "packageManager": "pnpm@9.3.0",
   "scripts": {
     "dev": "next dev",
+    "gallery": "node scripts/generate-gallery.ts",
     "build": "next build",
     "serve": "npx serve ./out",
     "lint": "next lint"
@@ -24,6 +25,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cloudinary": "^2.9.0",
+    "dotenv": "^17.3.1",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "typescript": "^5"
