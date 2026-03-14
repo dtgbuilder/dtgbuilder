@@ -1,37 +1,46 @@
-"use client";
-
-import { BasicComponent } from "@/component/display/BasicComponent";
-import { Stack, Box, Typography } from "@mui/material";
+// src/app/page.tsx
+import { Stack, Typography } from "@mui/material";
+import { BasicPanel } from "@/component/display/BasicPanel";
 
 export default function Home() {
-
-
     return (
-        <Stack gap={ 6 } width="100%">
-
-            <Box
-                paddingTop={ 8 }
-            >
-
-                <Stack maxWidth="900px" margin="0 auto" gap={ 8 }>
-
-                    <Stack
-                        gap={ 4 }
-                    >
-                        <Typography variant="h1" fontSize="24px" my={ 2 }>
-                            stuff
+        <Stack
+            sx={ {
+                width: "100%",
+                maxWidth: "900px",
+                margin: "0 auto",
+                py: 6
+            } }
+            gap={ 3 }
+        >
+            <BasicPanel
+                eyebrow="DTG BUILDER LLC"
+                title="Terrain Specialist"
+                body={
+                    <Stack gap={ 2 }>
+                        <Typography>
+                            I specialize in outdoor work that other crews avoid:
+                            steep ground, odd geometry, difficult access, and
+                            walk-in only sites.
                         </Typography>
-                        <BasicComponent
-                                dateLabel={ "dateLabel" }
-                                title={ "title" }
-                                subtitle={ "subtitle" }
-                                href={ `/gallery` }
-                                rsvpHref={ "/about" }
-                            />
-
+                        <Typography>
+                            Most of my projects use natural stone and wood to
+                            create visually striking outdoor spaces built in
+                            places where machines cannot reach.
+                        </Typography>
                     </Stack>
-                </Stack>
-            </Box>
+                }
+                actions={ [
+                    {
+                        href: "/about",
+                        text: "About"
+                    },
+                    {
+                        href: "/gallery",
+                        text: "Gallery"
+                    }
+                ] }
+            />
         </Stack>
     );
 }

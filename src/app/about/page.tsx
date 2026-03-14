@@ -2,15 +2,16 @@ import {
     Stack,
     Typography
 } from "@mui/material";
-import {InlineLink} from "@/component/link/InlineLink";
-import {Registered} from "@/component/brand/Registered";
+import { InlineLink } from "@/component/link/InlineLink";
 
 export default function About() {
     return (
         <Stack
             sx={ {
-                maxWidth: "700px",
-                margin: "0 auto"
+                width: "100%",
+                maxWidth: "720px",
+                margin: "0 auto",
+                px: 2
             } }
         >
             <Typography
@@ -37,43 +38,30 @@ export default function About() {
                         variant="h5"
                         align="center"
                     >
-                        A nice guy
-                    </Typography>
-                    <Typography
-                        align="center"
-                    >
-                        March 15, 2025
-                    </Typography>
-                </Stack>
-                <Stack>
-                    <Typography>
-                        howdy
-                    </Typography>
-                </Stack>
-                <Stack
-                    alignItems="center"
-                    gap={ 1 }
-                >
-                    <Typography
-                        variant="h5"
-                        align="center"
-                    >
-                        Some cool quote
-                        <Registered
-                            fontSize = "0.4em"
-                            top = "-1em"
-                            ml ={0.3}
-                        />
+                        Terrain Specialist
                     </Typography>
                 </Stack>
                 <Stack
                     gap={ 1 }
                 >
                     <Typography>
-                        Hey there!
+                        I specialize in outdoor work that other crews avoid: steep ground, odd geometry, difficult access, and walk-in only sites.
                     </Typography>
                     <Typography>
-                        Checkout out the <InlineLink href="/gallery" text="gallery" /> for some cool stuff.
+                        Most of my projects use natural stone and wood to create visually striking outdoor spaces built in places where machines cannot reach.
+                    </Typography>
+                    <Typography>
+                        My approach is simple: work with the land, keep the footprint light, and build things that look like they belong.
+                    </Typography>
+                    <Typography>
+                        I am especially interested in terrain challenges, access problems, drainage solutions, and low-impact landscape installs where water, stone, slope, and native vegetation need to work together.
+                    </Typography>
+                </Stack>
+                <Stack
+                    gap={ 1 }
+                >
+                    <Typography>
+                        Check out the <InlineLink href="/gallery" text="gallery" /> to see recent work.
                     </Typography>
                     <Typography>
                         Dylan Green

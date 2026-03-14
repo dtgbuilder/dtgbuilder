@@ -14,8 +14,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-    title: "Fox Hollow Conservancy",
-    description: "Conserve. Protect. Restore.",
+    title: "DTG BUILDER LLC",
+    description: "Terrain Specialist",
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,7 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         >
         <AppThemeProvider>
                 <Header />
-                <Stack margin="0 auto" px={ 2 }>
+                <Stack margin="0 auto" px={ 2 } width="100%">
                     { children }
                 </Stack>
                 <Footer />
