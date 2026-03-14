@@ -9,8 +9,9 @@ export default function About() {
         <Stack
             sx={ {
                 width: "100%",
-                maxWidth: "700px",
-                margin: "0 auto"
+                maxWidth: "720px",
+                margin: "0 auto",
+                px: 2
             } }
         >
             <Typography
