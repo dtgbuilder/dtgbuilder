@@ -10,8 +10,7 @@ export default function About() {
             sx={ {
                 width: "100%",
                 maxWidth: "720px",
-                margin: "0 auto",
-                px: 2
+                margin: "0 auto"
             } }
         >
             <Typography

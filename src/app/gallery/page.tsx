@@ -16,8 +16,7 @@ export default function Page() {
             sx={ {
                 width: "100%",
                 maxWidth: COLUMN_MAX_WIDTH,
-                margin: "0 auto",
-                px: 2
+                margin: "0 auto"
             } }
         >
             <Typography

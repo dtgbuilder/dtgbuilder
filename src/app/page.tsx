@@ -8,39 +8,42 @@ export default function Home() {
             sx={ {
                 width: "100%",
                 maxWidth: "900px",
-                margin: "0 auto",
-                py: 6
+                margin: "0 auto"
             } }
-            gap={ 3 }
         >
-            <BasicPanel
-                eyebrow="DTG BUILDER LLC"
-                title="Terrain Specialist"
-                body={
-                    <Stack gap={ 2 }>
-                        <Typography>
-                            I specialize in outdoor work that other crews avoid:
-                            steep ground, odd geometry, difficult access, and
-                            walk-in only sites.
-                        </Typography>
-                        <Typography>
-                            Most of my projects use natural stone and wood to
-                            create visually striking outdoor spaces built in
-                            places where machines cannot reach.
-                        </Typography>
-                    </Stack>
-                }
-                actions={ [
-                    {
-                        href: "/about",
-                        text: "About"
-                    },
-                    {
-                        href: "/gallery",
-                        text: "Gallery"
+            <Typography
+                variant="h1"
+                fontSize={ { sm: 96, xs: 72 } }
+                my={ 8 }
+            >
+                DTG BUILDER
+            </Typography>
+            <Stack
+                gap={ 8 }
+            >
+                <BasicPanel
+                    eyebrow="Carpentry & Landscaping"
+                    title="Terrain Specialist"
+                    body={
+                        <Stack gap={ 2 }>
+                            <Typography>
+                                Serving Western North Carolina, Cullowhee, Cashiers, Highlands, Sylva, Balsam, and surrounding areas.
+                            </Typography>
+                        </Stack>
                     }
-                ] }
-            />
+                    actions={ [
+                        {
+                            href: "/about",
+                            text: "About"
+                        },
+                        {
+                            href: "/gallery",
+                            text: "Gallery"
+                        }
+                    ] }
+                />
+            </Stack>
+            
         </Stack>
     );
 }
