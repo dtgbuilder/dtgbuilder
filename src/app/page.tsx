@@ -1,6 +1,15 @@
 // src/app/page.tsx
 import { Stack, Typography } from "@mui/material";
 import { BasicPanel } from "@/component/display/BasicPanel";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Home",
+    description: "Carpentry and landscaping services from DTG Builder in Western North Carolina.",
+    alternates: {
+        canonical: "/"
+    }
+};
 
 export default function Home() {
     return (

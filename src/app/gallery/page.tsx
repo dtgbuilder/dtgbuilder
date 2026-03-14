@@ -3,12 +3,21 @@ import { Stack, Typography } from "@mui/material";
 import { CldImage } from "next-cloudinary";
 import { galleryImages as images } from "@/data/galleryImages";
 import { brandColors } from "@/component/color/brandColors";
+import { Metadata } from "next";
 
 const COLUMN_MAX_WIDTH = 720;
 const LANDSCAPE_MAX_WIDTH = 720;
 const PORTRAIT_MAX_WIDTH = 560;
 
 const capitalize = (str: string) => { return str[ 0 ].toUpperCase() + str.slice(1) };
+
+export const metadata: Metadata = {
+    title: "Gallery",
+    description: "View gallery photos of carpentry and landscaping work by DTG Builder.",
+    alternates: {
+        canonical: "/gallery"
+    }
+};
 
 export default function Page() {
     return (

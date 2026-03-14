@@ -3,6 +3,15 @@ import {
     Typography
 } from "@mui/material";
 import { InlineLink } from "@/component/link/InlineLink";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About",
+    description: "Learn about DTG Builder LLC and the services offered in Western North Carolina.",
+    alternates: {
+        canonical: "/about"
+    }
+};
 
 export default function About() {
     return (
