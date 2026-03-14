@@ -8,6 +8,8 @@ const COLUMN_MAX_WIDTH = 720;
 const LANDSCAPE_MAX_WIDTH = 720;
 const PORTRAIT_MAX_WIDTH = 560;
 
+const capitalize = (str: string) => { return str[ 0 ].toUpperCase() + str.slice(1) };
+
 export default function Page() {
     return (
         <Stack
@@ -20,20 +22,23 @@ export default function Page() {
         >
             <Typography
                 variant="h1"
-                fontSize="24px"
-                my={ 4 }
+                my={ 8 }
             >
                 Gallery
             </Typography>
 
-            <Stack sx={ { width: "100%", gap: 3 } }>
+            <Stack sx={ { width: "100%", gap: 8 } }>
                 {images.map((image, index) => {
                     const isPortrait = image.height > image.width;
 
                     return (
                         <Stack
                             key={ index }
+                            component="section"
+                            borderRadius={ 1 }
+                            bgcolor={ brandColors.offWhite }
                             sx={ {
+                                boxShadow: "0px 2px 8px rgba(0,0,0,0.08)",
                                 width: "100%",
                                 maxWidth: isPortrait
                                     ? PORTRAIT_MAX_WIDTH
@@ -42,6 +47,16 @@ export default function Page() {
                                 gap: 1
                             } }
                         >
+                            <Typography
+                                px={ 2 }
+                                pt={ 1 }
+                                sx={ {
+                                    textAlign: "left",
+                                    color: brandColors.offBlack
+                                } }
+                            >
+                                { capitalize(image.alt) }
+                            </Typography>
                             <CldImage
                                 src={ image.src }
                                 alt={ image.alt }
@@ -56,21 +71,12 @@ export default function Page() {
                                     width: "100%",
                                     height: "auto",
                                     display: "block",
-                                    borderRadius: 2
+                                    borderBottomLeftRadius: 2,
+                                    borderBottomRightRadius: 2
                                 } }
                             />
 
-                            <Typography
-                                sx={ {
-                                    textTransform: "uppercase",
-                                    textAlign: "left",
-                                    lineHeight: "100%",
-                                    fontSize: 14,
-                                    color: brandColors.offBlack
-                                } }
-                            >
-                                {image.alt}
-                            </Typography>
+                            
                         </Stack>
                     );
                 })}

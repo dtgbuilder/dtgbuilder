@@ -16,8 +16,7 @@ export default function About() {
         >
             <Typography
                 variant="h1"
-                fontSize="24px"
-                my={ 4 }
+                my={ 8 }
             >
                 About
             </Typography>
@@ -25,28 +24,8 @@ export default function About() {
                 gap={ 3 }
             >
                 <Stack
-                    alignItems="center"
                     gap={ 1 }
                 >
-                    <Typography
-                        variant="h5"
-                        align="center"
-                    >
-                        DTG BUILDER LLC
-                    </Typography>
-                    <Typography
-                        variant="h5"
-                        align="center"
-                    >
-                        Terrain Specialist
-                    </Typography>
-                </Stack>
-                <Stack
-                    gap={ 1 }
-                >
-                    <Typography>
-                        I specialize in outdoor work that other crews avoid: steep ground, odd geometry, difficult access, and walk-in only sites.
-                    </Typography>
                     <Typography>
                         Most of my projects use natural stone and wood to create visually striking outdoor spaces built in places where machines cannot reach.
                     </Typography>
