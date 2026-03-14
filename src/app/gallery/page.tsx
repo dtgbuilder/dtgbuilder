@@ -1,4 +1,3 @@
-"use client";
 import { Stack, Typography } from "@mui/material";
 import { CldImage } from "next-cloudinary";
 import { galleryImages as images } from "@/data/galleryImages";
@@ -30,6 +29,7 @@ export default function Page() {
         >
             <Typography
                 variant="h1"
+                component="h1"
                 my={ 8 }
             >
                 Gallery
@@ -42,7 +42,7 @@ export default function Page() {
                     return (
                         <Stack
                             key={ index }
-                            component="section"
+                            component="figure"
                             borderRadius={ 1 }
                             bgcolor={ brandColors.offWhite }
                             sx={ {
@@ -56,6 +56,7 @@ export default function Page() {
                             } }
                         >
                             <Typography
+                                component="figcaption"
                                 px={ 2 }
                                 pt={ 1 }
                                 sx={ {

@@ -24,6 +24,7 @@ export default function About() {
         >
             <Typography
                 variant="h1"
+                component="h1"
                 my={ 8 }
             >
                 About
