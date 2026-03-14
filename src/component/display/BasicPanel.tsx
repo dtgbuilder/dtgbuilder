@@ -34,7 +34,7 @@ export function BasicPanel({
     return (
         <Box
             component="section"
-            p={ 4 }
+            p={ { sm: 4, xs: 2 } }
             borderRadius={ 1 }
             bgcolor={ brandColors.offWhite }
             sx={ {
@@ -61,7 +61,7 @@ export function BasicPanel({
 
                 {title && (
                     typeof title === "string" ? (
-                        <Typography variant="h4">
+                        <Typography variant="h4" component="h2">
                             {title}
                         </Typography>
                     ) : title

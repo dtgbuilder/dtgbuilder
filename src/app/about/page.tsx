@@ -3,6 +3,15 @@ import {
     Typography
 } from "@mui/material";
 import { InlineLink } from "@/component/link/InlineLink";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About",
+    description: "Learn about DTG Builder LLC and the services offered in Western North Carolina.",
+    alternates: {
+        canonical: "/about"
+    }
+};
 
 export default function About() {
     return (
@@ -10,14 +19,13 @@ export default function About() {
             sx={ {
                 width: "100%",
                 maxWidth: "720px",
-                margin: "0 auto",
-                px: 2
+                margin: "0 auto"
             } }
         >
             <Typography
                 variant="h1"
-                fontSize="24px"
-                my={ 4 }
+                component="h1"
+                my={ 8 }
             >
                 About
             </Typography>
@@ -25,28 +33,8 @@ export default function About() {
                 gap={ 3 }
             >
                 <Stack
-                    alignItems="center"
                     gap={ 1 }
                 >
-                    <Typography
-                        variant="h5"
-                        align="center"
-                    >
-                        DTG BUILDER LLC
-                    </Typography>
-                    <Typography
-                        variant="h5"
-                        align="center"
-                    >
-                        Terrain Specialist
-                    </Typography>
-                </Stack>
-                <Stack
-                    gap={ 1 }
-                >
-                    <Typography>
-                        I specialize in outdoor work that other crews avoid: steep ground, odd geometry, difficult access, and walk-in only sites.
-                    </Typography>
                     <Typography>
                         Most of my projects use natural stone and wood to create visually striking outdoor spaces built in places where machines cannot reach.
                     </Typography>
