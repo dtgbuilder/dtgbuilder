@@ -2,7 +2,6 @@ import { Stack, Typography } from "@mui/material";
 import { Metadata } from "next";
 import { PortfolioFeature } from "./PortfolioFeature";
 
-
 export const metadata: Metadata = {
     title: "Software Portfolio",
     description: "Portfolio of Software and Web Development Projects",
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 
 const entries = [
     {
-        url: "www.acmology.com",
+        url: "https://www.acmology.com",
         title: "Acmology",
         description: "A web application for managing and tracking academic research papers."
     }
@@ -22,11 +21,11 @@ const entries = [
 export default function Page() {
     return (
         <Stack
-            sx={ {
+            sx={{
                 width: "100%",
-                maxWidth: "700px",
+                maxWidth: "800px",
                 margin: "0 auto"
-            } }
+            }}
         >
             <Typography
                 variant="h1"
@@ -36,10 +35,15 @@ export default function Page() {
                 Software Portfolio
             </Typography>
 
-            <Stack sx={ { width: "100%", gap: 8 } }>
-                {entries.map((entry, index) => (
+            <Stack
+                sx={{
+                    width: "100%",
+                    gap: 4
+                }}
+            >
+                {entries.map((entry) => (
                     <PortfolioFeature
-                        key={ index }
+                        key={ entry.url }
                         url={ entry.url }
                         title={ entry.title }
                         description={ entry.description }
