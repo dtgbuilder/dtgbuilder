@@ -14,7 +14,8 @@ import { usePathname } from "next/navigation";
 const links = [
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
-    { href: "/gallery", text: "Gallery" }
+    { href: "/gallery", text: "Gallery" },
+    { href: "/software-portfolio", text: "Software Portfolio" }
 ];
 
 export const Header : FC = () => {
