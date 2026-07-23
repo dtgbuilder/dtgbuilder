@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 const entries = [
     {
         url: "https://www.acmology.com",
-        title: "Acmology",
-        description: "A web application for managing and tracking academic research papers."
+        title: "ACMOLOGY",
+        description: "The big one."
     }
 ];
 
