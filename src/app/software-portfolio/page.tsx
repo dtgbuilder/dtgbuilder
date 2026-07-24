@@ -27,7 +27,7 @@ const entries: PortfolioEntry[] = [
     },
     {
         date: "2025 - Present",
-        websiteUrl: "https://foxhollowconservacy.org",
+        websiteUrl: "https://foxhollowconservancy.org",
         title: "Fox Hollow Conservancy",
         description: "This is a low budget website I built for a local nonprofit. The coolest thing about this website is the Stripe integration for donations. It is a static site deployed on Cloudflare Pages and uses a concise Cloudflare edge function to ensure that Stripe customers are recognized based on their email, rather than creating a new customer for each donation. Besides the domain name registration, it costs nothing to host. It also uses Google Calendar as a rudimentary CMS, which was interesting to set up. We are planning to do another round of work expanding this website very soon."
     },
